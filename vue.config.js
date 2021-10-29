@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       '^/api': {
-        target: 'http://127.0.0.1:8001',
+        target: process.env.VUE_APP_PORXY_URL,
         pathRewrite: {
           '^/api': '',
         },
@@ -22,7 +22,7 @@ module.exports = {
     config
         .plugin('html')
         .tap((args) => {
-          args[0].title = '每天进步一点点';
+          args[0].title = '浅笑安然';
           return args;
         });
   },
