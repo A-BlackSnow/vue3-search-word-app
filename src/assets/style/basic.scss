@@ -1,0 +1,23 @@
+body {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+button {
+  border-style: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+input {
+  padding: 0;
+}
+
+.main-page, .trans-page, .profile-page, .vocabulary-page {
+  box-sizing: border-box;
+  padding-bottom: 54px;
+  min-height: 100vh;
+}
