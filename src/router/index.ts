@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { Toast } from 'vant';
 import localCache from '@/utils/cache';
 
 declare module 'vue-router' {
@@ -132,7 +133,10 @@ router.beforeEach(async (to, from) => {
   }
 
   // 进入需要 token 的页面
-  if (to.meta.isNoTokenAccess && !token) return { name: 'Login' };
+  if (to.meta.isNoTokenAccess && !token) {
+    Toast({ message: '您还没有登录，请登录！' });
+    return { name: 'Login' };
+  }
 
   return true;
 });

@@ -51,6 +51,7 @@ export class InterceptorManager {
           // token过期或不合法，需要登录
           if (error.response?.status === 401) {
             localCache.deleteCache('token');
+            Toast({ message: '登录状态过期，请重新登录。' });
             router.push({ name: 'Login' });
             return {};
           }

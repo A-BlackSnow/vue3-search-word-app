@@ -87,7 +87,7 @@ const submitLoginData = async () => {
   isDisabledSubmit.value = false;
 };
 
-const goSignUpPage = () => router.replace({ name: 'SignUp' });
+const goSignUpPage = () => router.push({ name: 'SignUp' });
 </script>
 
 <style lang="scss">

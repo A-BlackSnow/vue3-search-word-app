@@ -36,7 +36,7 @@ export default defineComponent({
   setup(props, ctx) {
     const store = useStore<IStoreType>();
     const isAllowGet = ref(true);
-    const timing = ref<number>(5);
+    const timing = ref<number>(60);
 
     const verifyCode = computed({
       get() {
@@ -61,7 +61,7 @@ export default defineComponent({
           clearInterval(timer);
           isAllowGet.value = true;
           nextTick(() => {
-            timing.value = 5;
+            timing.value = 60;
           });
         }
       }, 1000);
