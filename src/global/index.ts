@@ -19,6 +19,8 @@ import {
   CellGroup,
   Radio,
   RadioGroup,
+  Swipe,
+  SwipeItem,
 } from 'vant';
 
 const components: Plugin[] = [
@@ -41,6 +43,8 @@ const components: Plugin[] = [
   CellGroup,
   Radio,
   RadioGroup,
+  Swipe,
+  SwipeItem,
 ];
 
 export const registerComponent = (app: App): App => {
