@@ -113,7 +113,7 @@ const routes: Array<RouteRecordRaw> = [
 const scrollY: { [key: string]: number } = {};
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory('/'),
   routes,
   scrollBehavior(to) {
     return { top: scrollY[to.path] || 0 };
