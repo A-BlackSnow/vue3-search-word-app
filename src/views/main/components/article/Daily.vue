@@ -3,7 +3,7 @@
     <div class="sentence-wrap">
       <van-swipe lazy-render :show-indicators="false" autoplay=3000>
         <van-swipe-item v-for="senItem in sentences" :key="senItem._id">
-          <div class="sentence-panel">
+          <div class="daily-sentence-panel">
             <img class="banner-image" :src="senItem.pictures.banners" />
             <div class="sentence-show">
               <h2 class="sent-date">
@@ -66,7 +66,7 @@ const formatDateToNumber = (date: string) => {
     color: #fff;
   }
 }
-.sentence-panel {
+.daily-sentence-panel {
   position: relative;
   .banner-image {
     display: block;
