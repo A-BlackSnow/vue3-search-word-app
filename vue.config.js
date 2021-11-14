@@ -1,11 +1,13 @@
 module.exports = {
+  publicPath: process.env.VUE_APP_PUBLIC_PATH,
   devServer: {
     proxy: {
       '^/api': {
-        target: process.env.VUE_APP_PORXY_URL,
         pathRewrite: {
           '^/api': '',
         },
+        target: process.env.VUE_APP_PROXY_URL,
+        secure: false,
         changeOrigin: true,
       },
     },
